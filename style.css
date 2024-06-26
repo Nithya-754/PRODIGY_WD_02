@@ -1,0 +1,135 @@
+*,
+* :before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(images/pexels-karolina-grabowska-5412502.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:auto;
+    max-width: 100%;
+}
+.container{
+        
+    background-color: #fffefe;
+    width: 40%;
+    min-width: 100px;
+    position:fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px 0;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.338);
+}
+.timer-display {
+    position: relative;
+    width: 90%;
+    background: #111;
+    left: 4%;
+    font-family: 'Roboto Mono', monospace;
+    color: #fffefe;
+    font-size: 30px;
+    font-style: oblique;
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgb(252, 235, 1);
+}
+.buttons {
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+    
+.buttons button {
+    width: 120px;
+    height: 45px;
+    background-color:rgb(38, 189, 25);
+    color: #111111;
+    border:none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+.buttons button:nth-last-child(3) {
+    background-color:rgb(250, 6, 6);
+}
+
+.buttons button:nth-last-child(2) {
+    background-color:rgb(247, 243, 10);
+}
+
+.buttons button:nth-last-child(1) {
+    background-color: rgb(33, 14, 201);
+}
+
+.buttons button:hover {
+    flex:1;
+    box-shadow: 0 0 100px rgb(247, 243, 6);
+}
+.laps {
+    margin-top: 20px;
+    padding: 10px 20px;
+    max-height: 150px;
+    overflow-y:auto;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    color:#111;
+    font-weight: bold;
+    display:grid;
+    justify-content: center;   
+}
+@media screen and (max-width:600px){
+    *{
+        margin: 0;
+        padding: 0;
+        border: 10px #111;
+    }
+    body{
+        background-image: url(images/verticalimage.jpg);
+        background-size: cover;
+        background-repeat:no-repeat;
+        max-height:100%;
+        max-width:100%;
+    }
+    .container{
+        background-color: #fffefe;
+        display: flex;
+        flex-wrap:wrap;
+        position: fixed;
+        height: 60%;
+        min-width: 90%;       
+    }
+    .timer-display{
+        font-size: small;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+    }
+    .laps {
+        max-height:50px;
+        overflow-x:auto;
+        font-family: 'Roboto Mono', monospace;
+        color:#111;
+        font-weight: bold;
+        display:grid;
+        justify-content: center;  
+        cursor: pointer; 
+    }
+}   
